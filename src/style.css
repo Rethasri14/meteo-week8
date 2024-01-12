@@ -1,6 +1,12 @@
 body {
   background-color: #f9f7fe;
   font-family: "Roboto", sans-serif;
+  background-color: #f9f7fe;
+  font-family: "Roboto", sans-serif;
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/110/331/original/pastel-background-with-aesthetic-pink-sky.jpg?1705101360");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 a {
