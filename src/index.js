@@ -75,24 +75,25 @@ function displayForecast(response) {
 
   response.data.daily.forEach(function (day, index) {
     if (index > 0 && index < 6) {
-      // Exclude the current day (index 0) and limit to the next 5 days
-      let forecastDayIndex = (currentDayIndex + index) % 7;
+      let forecastDayIndex = (currentDayIndex + index + 1) % 7;
       forecastHtml += `
-      <div class="weather-forecast-day">
-        <div class="weather-forecast-date">${formatDay(day.time)}</div>
-        <div>
-        <img src="${day.condition.icon_url}" class="weather-forecast-icon" />
-        </div>
-        <div class="weather-forecast-temperatures">
-          <div class="weather-forecast-temperature">
-            <strong>${Math.round(day.temperature.maximum)}º</strong>
+        <div class="weather-forecast-day">
+          <div class="weather-forecast-date">${formatDay(day.time)}</div>
+          <div>
+            <img src="${
+              day.condition.icon_url
+            }" class="weather-forecast-icon" />
           </div>
-          <div class="weather-forecast-temperature">${Math.round(
-            day.temperature.minimum
-          )}º</div>
+          <div class="weather-forecast-temperatures">
+            <div class="weather-forecast-temperature">
+              <strong>${Math.round(day.temperature.maximum)}º</strong>
+            </div>
+            <div class="weather-forecast-temperature">${Math.round(
+              day.temperature.minimum
+            )}º</div>
+          </div>
         </div>
-      </div>
-    `;
+      `;
     }
   });
 
