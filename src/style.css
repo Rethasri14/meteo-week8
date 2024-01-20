@@ -1,8 +1,6 @@
 body {
   background-color: #f9f7fe;
   font-family: "Roboto", sans-serif;
-  background-color: #f9f7fe;
-  font-family: "Roboto", sans-serif;
   background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/110/331/original/pastel-background-with-aesthetic-pink-sky.jpg?1705101360");
   background-size: cover;
   background-position: center;
@@ -45,9 +43,10 @@ header {
   border-radius: 6px;
   color: white;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.search-form-button :hover {
+.search-form-button:hover {
   background-color: #7643ff;
 }
 
@@ -92,7 +91,7 @@ main {
   font-weight: bold;
 }
 
-.weatehr-app-unit {
+.weather-app-unit {
   margin-top: 6px;
   font-size: 28px;
 }
@@ -117,6 +116,7 @@ main {
   display: block;
   margin: 0 auto;
 }
+
 .weather-forecast-temperatures {
   text-align: center;
   color: #f65282;
